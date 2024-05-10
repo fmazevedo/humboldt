@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<title>Código 5.7 - Inserindo texto no canvas</title>
+	</head>
+<body>
+	<canvas id="minha-tela" width="800" height="400" style="border: #F00 solid 1px;"> </canvas>  
+	<script>  
+		var canvas = document.getElementById('minha-tela'); 
+		var ctx = canvas.getContext('2d');
+		ctx.font = "20px Arial";
+		ctx.strokeText("Este texto não tem alinhamento",10,50);
+		//linha horizontal com espessura de 1px
+		ctx.moveTo(0, 300); 
+		ctx.lineTo(800, 300);
+		ctx.stroke();
+		//texto com alinhamento superior
+		ctx.textBaseline = 'top';
+		ctx.fillText("Alinhamento top.", 50, 300);
+		ctx.textBaseline = 'middle';
+		ctx.fillText("Alinhamento middle.", 300, 300);
+		ctx.textBaseline = 'bottom';	
+		ctx.fillText("Alinhamento bottom.", 550, 300);
+		ctx.translate(750,0);
+		ctx.rotate(Math.PI/2);
+		ctx.font = "25px Courier";
+		ctx.fillText("Texto na Vertical", 10, 0);
+	</script>  
+</body>
+</html>
