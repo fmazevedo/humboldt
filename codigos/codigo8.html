@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<title>Código 5.9 - Desenhando outros objetos</title>
+	</head>
+<body>
+	<canvas id="minha-tela" width="800" height="400" style="border: #F00 solid 1px;"> </canvas>  
+	<script>  
+		var canvas = document.getElementById('minha-tela'); 
+		var ctx = canvas.getContext('2d');
+		ctx.beginPath();
+		ctx.strokeStyle = 'red'; //cor dos traçados
+		ctx.fillStyle = 'yellow'; //cor do preenchimento
+		ctx.lineWidth = 2;//espessura da linha
+		ctx.strokeText("PONTO 1", 400, 30);
+		ctx.moveTo(400, 50); //PONTO 1
+		ctx.strokeText("PONTO 2", 250, 370);
+		ctx.lineTo(250,350); //PONTO 2
+		ctx.strokeText("PONTO 3", 600, 170);
+		ctx.lineTo(600,150); //PONTO 3
+		ctx.strokeText("PONTO 4", 150, 170);
+		ctx.lineTo(200,150); //PONTO 4
+		ctx.strokeText("PONTO 5", 550, 370);
+		ctx.lineTo(550,350); //PONTO 5
+		ctx.strokeText("PONTO 6", 350, 50);
+		ctx.lineTo(400, 50); //PONTO 6
+		ctx.stroke(); //traçar as linhas
+		ctx.fill(); //preencher o objeto formato
+	</script>  
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Código 5.1 - Exemplo de Canvas</title>
+	</head>
+<body>
+	<canvas id="minha-tela" width="800" height="400" style="border: #F00 solid 1px;"> </canvas>  
+	<script>  
+		var canvas = document.getElementById ('minha-tela'); 
+		//verificação do funcionamento das propriedades e os métodos
+		if(canvas.getContext)
+		{   
+			var ctx = canvas.getContext ('2d');   
+			//código de desenho aqui 
+		}
+		else 
+		{   
+			//código não suportado na tela aqui
+			alert('Seu navegador não suporta canvas');
+		}
+	</script>  
+</body>
+</html>
